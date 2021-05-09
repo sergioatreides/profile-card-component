@@ -25,7 +25,7 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    min-width: 25%;
     height: 60%;
     /* border: 1px solid black; */
     border-radius: 15px;
@@ -44,10 +44,77 @@ body {
     border: 5px solid var(--white);
     border-radius: 100%;
 }
-
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    width: 100%;
+    border-bottom: 1px solid var(--dark-grey);
+}
+.name,
+.stat-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.age {
+    color: var(--dark-grey);
+    font-weight: normal;
+}
+.bio p {
+    margin: 5px 0px;
+}
+.city {
+    font-size: .8em;
+}
+.city,
+.stat-data {
+    color: var(--dark-grey);
+}
+.social {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    padding-top: 25px;
+}
+.social div {
+    margin: 0;
+}
+.stat-data,
+.stat-title {
+    text-align: center;
+    padding: 2px 0px;
+}
+.stat-data {
+    letter-spacing: .2em;
+    font-size: .6em;
+}
 .attribution { 
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        min-width: 30%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .card {
+        min-width: 40%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .card {
+        min-width: 50%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .card {
+        min-width: 80%;
+    }
 }
