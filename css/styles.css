@@ -3,22 +3,25 @@
     --dark-grey: hsl(0, 0%, 59%);
 }
 * {
+    font-family: 'Kumbh Sans', sans-serif;
     box-sizing: border-box;
     margin: 0 auto;
+
 }
 body {
-    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+    
 }
 .contenedor {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: hsl(185, 75%, 39%);
-    /*background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+    background:
+        url("../images/bg-pattern-top.svg") -40em -55em no-repeat,
+        url("../images/bg-pattern-bottom.svg") 30em 20em no-repeat;
+    background-size: 40%;
+    background-origin: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: -700px, 500px;
-    background-position-y: -900px, 300px;  */
     align-items: center;
     justify-content: center;
 }
@@ -27,7 +30,6 @@ body {
     flex-direction: column;
     min-width: 25%;
     height: 60%;
-    /* border: 1px solid black; */
     border-radius: 15px;
     background-image: url("../images/bg-pattern-card.svg");
     background-color: var(--white);
@@ -102,15 +104,33 @@ body {
     .card {
         min-width: 30%;
     }
+    .contenedor {
+        background-color: hsl(185, 75%, 39%);
+        background:
+            url("../images/bg-pattern-top.svg") -30em -35em no-repeat,
+            url("../images/bg-pattern-bottom.svg") 20em 20em no-repeat;
+    }
 }
 @media screen and (max-width: 800px) {
     .card {
         min-width: 40%;
     }
+    .contenedor {
+        background-color: hsl(185, 75%, 39%);;
+        background:
+            url("../images/bg-pattern-top.svg") -30em -35em no-repeat,
+            url("../images/bg-pattern-bottom.svg") 20em 20em no-repeat;
+    }
 }
 @media screen and (max-width: 600px) {
     .card {
         min-width: 50%;
+    }
+    .contenedor {
+        background-color: hsl(185, 75%, 39%);;
+        background:
+            url("../images/bg-pattern-top.svg") -45em -35em no-repeat,
+            url("../images/bg-pattern-bottom.svg") 7em 20em no-repeat;
     }
 }
 @media screen and (max-width: 450px) {
